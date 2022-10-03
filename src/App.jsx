@@ -5,6 +5,7 @@ import Banner from './components/Banner'
 import Location from './components/Location'
 import ResidentContainer from './components/ResidentContainer'
 import Error from './components/Error'
+import GoTopButton from './components/GoTopButton'
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
           />
         </>
       }
+      <GoTopButton />
     </div>
   )
 }

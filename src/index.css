@@ -7,8 +7,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #container {
@@ -46,6 +52,7 @@
   width: 1440px;
   position: absolute;
   z-index: 0;
+  object-fit: cover;
 }
 
 .app__banner__text {
@@ -243,4 +250,21 @@
 
 .info__list__element {
   height: 51px;
+}
+
+/* BOTÓN PARA SUBIR */
+
+.goTopButton {
+  width: 60px;
+  height: 60px;
+  background-color: #4AB648;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 50px;
+  color: #062226;
+  text-align: center;
+  line-height: 78px;
 }

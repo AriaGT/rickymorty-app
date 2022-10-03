@@ -32,7 +32,7 @@ const Banner = ({suggestions, setSuggestions, setSearchInput, hideSuggestions, s
   }, [suggestions])
 
   return (
-    <div className="app__banner">
+    <div className="app__banner" id='banner'>
       <img className='app__banner__img' src={banner__img} alt="" />
       <img className='app__banner__text' src={banner__text} alt="Rick And Morty" />
       <input className='app__banner__input' type="text" placeholder="Escribe el nombre de la ubicación"
