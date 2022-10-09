@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import banner__img from '../assets/banner__img.svg'
 import banner__text from '../assets/banner__text.svg'
+import './styles/banner.css'
 
 const Banner = ({suggestions, setSuggestions, setSearchInput, hideSuggestions, showSuggestions}) => {
 
@@ -32,22 +33,22 @@ const Banner = ({suggestions, setSuggestions, setSearchInput, hideSuggestions, s
   }, [suggestions])
 
   return (
-    <div className="app__banner" id='banner'>
-      <img className='app__banner__img' src={banner__img} alt="" />
-      <img className='app__banner__text' src={banner__text} alt="Rick And Morty" />
-      <input className='app__banner__input' type="text" placeholder="Escribe el nombre de la ubicación"
+    <article className="banner" id='banner'>
+      <img className='banner__img' src={banner__img} alt="rick and morty " />
+      <img className='banner__text' src={banner__text} alt="Rick And Morty" />
+      <input className='banner__input' type="text" placeholder="Escribe el nombre de la ubicación"
       onKeyDown={handleKeyPress} onChange={handleChange}/>
-      <div className={`app__banner__suggestList ${status}`}>
-      {
-        suggestions?.map(location => (
-          <p className='app__banner__suggestList__element' onClick={() => {
-            handleClick(location.id)
-            setStatus('hidden')
-          }} key={location.id}>({location.id}) {location.name}</p>
-        ))
-      }
+      <div className={`banner__suggestList ${status}`}>
+        {
+          suggestions?.map(location => (
+            <p className='banner__suggestList__element' onClick={() => {
+              handleClick(location.id)
+              setStatus('hidden')
+            }} key={location.id}>({location.id}) {location.name}</p>
+          ))
+        }
       </div>
-    </div>
+    </article>
   )
 }
 
