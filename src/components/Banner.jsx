@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import banner__img from '../assets/banner__img.svg'
+import banner__img from '../assets/banner__img.jpg'
 import banner__text from '../assets/banner__text.svg'
 import './styles/banner.css'
 
