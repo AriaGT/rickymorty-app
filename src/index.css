@@ -1,270 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* --- VARIABLES --- */
+
+:root {
+  --font-mobile: 2.5vw;
+  --font-desktop: 24px;
+}
+
+
+/* --- RESET --- */
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
-
-html {
-  scroll-behavior: smooth;
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 }
-
-#root {
-  cursor: default;
-  white-space: nowrap;
-  overflow: hidden;
+h1, h2, h3, h4, p, ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
-#container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 906px;
+ul {
+  list-style: none;
+  padding-left: 0;
 }
-
-.app {
-  position: relative;
-  background: #05292E;
-  color: #FBFBFB;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* BANNER */
-
-.app__banner {
-  position: relative;
-  height: 372px;
-  width: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.app__banner__img {
-  border-radius: 40px;
-  height: 100%;
-  width: 1440px;
-  position: absolute;
-  z-index: 0;
-  object-fit: cover;
-}
-
-.app__banner__text {
-  height: 176px;
-  transition: .2s ease-in-out;
-  top: 48px;
-  position: absolute;
-  z-index: 10;
-}
-
-.app__banner__text:hover {
-  filter: drop-shadow(0 0 8px #6af07e) brightness(90%);
-}
-
-.app__banner__input {
-  position: absolute;
-  top: 264px;
-  z-index: 10;
-  font-size: 18px;
-  padding: 29px;
-  width: 890px;
+button {
   border: none;
+}
+input {
   outline: none;
-  background-color: #FBFBFB;
-}
-
-.app__banner__suggestList {
-  position: absolute;
-  z-index: 10;
-  top: 343px;
-  color: black;
-  background-color: #FBFBFB;
-  width: 890px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.app__banner__suggestList::-webkit-scrollbar {
-  width: 7px;
-}
-
-.app__banner__suggestList__padding {
-  padding: 12px 0;
-}
-
-.app__banner__suggestList__element {
-  border: 1px solid #FBFBFB;
-  padding: 12px 22px;
-}
-
-.app__banner__suggestList__element:hover {
-  color: #FBFBFB;
-  background-color: #062226;
-}
-
-.hidden {
-  display: none;
-}
-
-/* UBICACIÓN */
-
-.locationCard {
-  width: 890px;
-  height: 126px;
-  margin: 32px 0;
-  background-color: #062226;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  font-size: 18px;
-  gap: 0;
-}
-
-.locationCard > li {
-  display: flex;
-  flex-direction: column;
-  max-width: 153px;
-}
-
-.locationCard > li > h3 {
-  margin-top: 24px;
-  font-size: 24px;
-  width: 153px;
-  height: 38px;
-}
-
-/* TARJETA DE LOS PERSONAJES */
-
-.resident {
-  display: grid;
-  grid-template:
-    "header" 402px
-    "info"   294px / 
-    437px;
-  height: 696px;
-  width: 437px;
-  background: #062226;
-  margin: 20px 8px;
-}
-
-.resident__header  {
-  grid-area: header;
-  position: relative;
-}
-
-.resident__header__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.resident__header__status {
-  height: 42px;
-  width: 180px;
-  background: #062226;
-  border-radius: 0px 12px 12px 0px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 38px;
-}
-
-.resident__header__status__status {
-  font-size: 18px;
-  margin-left: 4px;
-}
-
-.resident__header__status__circle {
-  width: 19px;
-  height: 19px;
-  margin: 8px;
-  border-radius: 50%;
-  background-color: #938686;
-}
-
-.status__dead {
-  background-color: #B94343
-}
-
-.status__alive {
-  background-color: #4AB648
-}
-
-.info {
-  grid-area: info;
-  padding: 24px;
-  position: relative;
-}
-
-.info__name {
-  height: 40px;
-  width: 389px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.info__line {
-  height: 1px;
-  width: 421px;
-  background: #084851;
-  margin: 7px 0;
-  position: absolute;
-  left: 8px;
-}
-
-.info__list {
-  height: 183px;
-  position: absolute;
-  bottom: 18px;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.info__list__element > span {
-  color : #7E7E7E;
-  font-weight: 700;
-  font-size: 18px;
-  height: 22px;
-}
-
-.info__list__element > p {
-  font-size: 18px;
-  font-weight: 700;
-  height: 29px;
-  color: #FBFBFB;
-}
-
-.info__list__element {
-  height: 51px;
-}
-
-/* BOTÓN PARA SUBIR */
-
-.goTopButton {
-  width: 60px;
-  height: 60px;
-  background-color: #4AB648;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  cursor: pointer;
-  font-size: 50px;
-  color: #062226;
-  text-align: center;
-  line-height: 78px;
 }
