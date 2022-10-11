@@ -1,0 +1,13 @@
+.residents-container {
+  height: 68vh;
+  width: 80%;
+  position: absolute;
+  top: 55vw;
+  left: 10%;
+  background-color: var(--div-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+}

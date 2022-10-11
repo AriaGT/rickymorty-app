@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ResidentsCards from './ResidentsCards'
+import './styles/residents.css'
 
 const ResidentContainer = ({location}) => {
 
@@ -10,7 +11,7 @@ const ResidentContainer = ({location}) => {
   }, [location])
 
   return (
-    <div id='container'>
+    <div className='residents-container'>
       {
         residents?.map(url => (
           <ResidentsCards

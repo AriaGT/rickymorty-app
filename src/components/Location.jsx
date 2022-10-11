@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './styles/location.css'
 
 const Location = ({location}) => {
 
@@ -19,7 +20,7 @@ const Location = ({location}) => {
   }
   
   return (
-    <ul className='locationCard'>
+    <ul className='location-container'>
       <li>
         <h3> Nombre: </h3><br />
         {translateUnknown(info.name)}

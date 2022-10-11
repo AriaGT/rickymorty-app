@@ -1,0 +1,29 @@
+.location-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--div-color);
+  border-radius: 2px;
+  position: sticky;
+  top: 14vw;
+  left: 10%;
+  width: 80%;
+  height: 14vw;
+  padding: 0 20px;
+  line-height: 1;
+  gap: 8px;
+}
+.location-container > li {
+  color: var(--white);
+  font-size: calc(var(--font-mobile) - .5vw);
+}
+br {
+  height: 8px;
+}
+
+@media (min-width: 930px) {
+  .location-container {
+    top: 30vw;
+  }
+}

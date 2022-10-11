@@ -5,8 +5,10 @@
 :root {
   --font-mobile: 2.5vw;
   --font-desktop: 24px;
+  --background-color: #05292e;
+  --div-color: #062226;
+  --white: #FBFBFB;
 }
-
 
 /* --- RESET --- */
 
@@ -15,7 +17,10 @@
 }
 body {
   margin: 0;
+  height: fit-content;
+  width: fit-content;
   font-family: 'Lato', sans-serif;
+  background-color: var(--background-color);
 }
 h1, h2, h3, h4, p, ul {
   margin-top: 0;

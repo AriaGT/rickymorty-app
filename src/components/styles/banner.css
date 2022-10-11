@@ -1,11 +1,12 @@
 .banner {
   height: 40vw;
   max-height: 372px;
-  background-color: #05292e;
-  position: relative;
+  background-color: var(--background-color);
+  position: sticky;
+  top: -26vw;
 }
 .banner__img {
-  height: 26vw;
+  height: 25.85vw;
   max-height: 372px;
 }
 .banner__text {
